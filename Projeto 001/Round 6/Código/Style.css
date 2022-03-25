@@ -93,8 +93,11 @@ header .logo img
 	text-align: right;
 	margin: 10px 0;
 }
-.navbar a.active,
 .navbar a:hover
+{
+	color: #f36;
+}
+.navbar a.active
 {
 	color: #f36;
 	font-size: 2rem;

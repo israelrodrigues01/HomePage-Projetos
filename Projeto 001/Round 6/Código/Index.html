@@ -48,21 +48,18 @@
 			</div>
 			<a href="#" class="section-btn"><i class='bx bx-play-circle'></i> Assistir</a>
 		</section>
-		<section class="sociais">
+		<div class="sociais">
 			<i class='bx bxl-instagram'></i>
 			<i class='bx bxl-youtube' ></i>
 			<i class='bx bxl-codepen'></i>
-		</section>
+		</div>
 	</main>
-
-
-
 
 <script>
 	
 	const headerBtn = document.querySelector('.header-btn');
 	const navbar = document.querySelector('.navbar');
-	const links = document.querySelector('.links a');
+	const links = document.querySelectorAll('.links a');
 
 	headerBtn.onclick = function()
 	{
@@ -70,7 +67,19 @@
 		this.classList.toggle('active')
 	}
 
-	forEach
+	links.forEach((item) =>
+	{
+		item.addEventListener('click', activelink)		
+	});
+
+	function activelink()
+	{
+		links.forEach((item) =>
+		{
+			item.classList.remove('active')
+			this.classList.add('active')
+		})
+	}
 
 </script>
 <script src="https://unpkg.com/boxicons@2.1.1/dist/boxicons.js"></script>
